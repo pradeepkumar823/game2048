@@ -55,7 +55,7 @@ game2048/
 
 ### 1 Clone the Repository
 
-git clone https://github.com/your-username/game2048.git
+git clone https:[//github.com/your-username/game2048.git](https://github.com/pradeepkumar823/game2048)
 cd game2048
 
 2️. Run the App
