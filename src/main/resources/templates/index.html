@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>2048 Game</h1>
+<form method="post" action="/move">
+    <div class="grid">
+        <table>
+            <tbody>
+            <tr th:each="row : ${board}">
+                <td th:each="cell : ${row}" th:text="${cell == 0 ? '' : cell}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="controls">
+        <button name="direction" value="up">↑</button><br>
+        <button name="direction" value="left">←</button>
+        <button name="direction" value="down">↓</button>
+        <button name="direction" value="right">→</button>
+    </div>
+</form>
+<form method="post" action="/reset">
+    <button type="submit">🔄 Reset</button>
+</form>
+</body>
+</html>
